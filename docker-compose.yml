@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: devpower
+      POSTGRES_PASSWORD: devpower
+      POSTGRES_DB: population_db
+    ports:
+      - "5432:5432"
+
+  get_data:
+    build: .
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: "postgresql://devpower:devpower@db:5432/population_db"
+      DATA_SOURCE: "https://en.wikipedia.org/w/index.php?title=List_of_countries_by_population_(United_Nations)&oldid=1215058959"
+    command: ["python", "main.py", "get_data"]
+
+  print_data:
+    build: .
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: "postgresql://devpower:devpower@db:5432/population_db"
+    command: ["python", "main.py", "print_data"]
