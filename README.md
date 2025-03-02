@@ -73,12 +73,6 @@ Population of Smallest Country
 - Update `DATA_SOURCE` in `docker-compose.yml` to modify the data source.
 - Modify `DATABASE_URL` if using a different PostgreSQL setup.
 
-## Future Enhancements
-
-- Add support for multiple data sources.
-- Implement a REST API for querying data.
-- Add scheduled updates for real-time data tracking.
-
 ## License
 
 This project is open-source and available under the MIT License.
