@@ -2,7 +2,7 @@
 
 ## Description
 
-This project automates the extraction, storage, and aggregation of country population data from Wikipedia. Using web scraping, PostgreSQL, and Docker, the system collects country-wise population data, stores it in a relational database, and allows retrieval of aggregated statistics through a single SQL query. The project is designed for efficiency, automation, and scalability, making it ideal for demographic analysis.
+This project automates the extraction, storage, and aggregation of country population data from Wikipedia. Using web scraping, PostgreSQL, and Docker, the system collects country-wise population data, stores it in a relational database, and allows retrieval of aggregated statistics through a single SQL query.
 
 ## Features
 
